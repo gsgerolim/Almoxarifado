@@ -7,11 +7,13 @@
     tools:context=".Cadastro">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView"
@@ -19,6 +21,7 @@
             android:layout_height="wrap_content"
             android:text="CADASTRO"
             android:textAlignment="center"
+            android:textColor="#673AB7"
             android:textSize="34sp" />
 
         <TextView
@@ -28,7 +31,7 @@
             android:text="Qual é o código do material?" />
 
         <EditText
-            android:id="@+id/edtCodMat"
+            android:id="@+id/edtCodCad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -41,7 +44,7 @@
             android:text="Qual é o nome do material?" />
 
         <EditText
-            android:id="@+id/edtNomeMat"
+            android:id="@+id/edtNomeCad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -54,7 +57,7 @@
             android:text="Qual é a quantidade entrando em estoque?" />
 
         <EditText
-            android:id="@+id/edtQuantMat"
+            android:id="@+id/edtQuantCad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
