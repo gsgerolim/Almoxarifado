@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Almoxarifado"
         tools:targetApi="31">
         <activity
+            android:name=".TelaEntrar"
+            android:exported="false" />
+        <activity
+            android:name=".TelaCadastrese"
+            android:exported="false" />
+        <activity
+            android:name=".TelaCadastro"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -26,4 +35,5 @@
                 android:value="" />
         </activity>
     </application>
+
 </manifest>

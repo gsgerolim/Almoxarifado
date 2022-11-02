@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaCadastro">
+
+    <ImageView
+        android:id="@+id/imgT1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/icone_model_almoxarifado_01_0_175x175" />
+
+    <TextView
+        android:id="@+id/txt1T1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:fontFamily="casual"
+        android:text="Entre ou cadastre-se"
+        android:textAlignment="center"
+        android:textColor="#1D5BB8"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgT1" />
+
+    <Button
+        android:id="@+id/btnEntrarT1"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:backgroundTint="#FFFFFF"
+        android:ellipsize="middle"
+        android:text="Entre"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:iconSize="80dp"
+        app:iconTint="#071E73"
+        app:iconTintMode="src_over"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1T1"
+        app:rippleColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnCadastroT1"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:ellipsize="middle"
+        android:text="Cadastre-se"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:iconSize="80dp"
+        app:iconTint="#071E73"
+        app:iconTintMode="src_over"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrarT1"
+        app:layout_constraintVertical_bias="0.317"
+        app:rippleColor="#FFFFFF" />
+</androidx.constraintlayout.widget.ConstraintLayout>
