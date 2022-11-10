@@ -2,6 +2,7 @@ package com.example.almoxarifado.Controller;
 
 import android.widget.EditText;
 
+import com.example.almoxarifado.DAO.MaterialDAO;
 import com.example.almoxarifado.Model.Material;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,17 +10,8 @@ import java.util.Scanner;
 
 public class MaterialController {
 
-    /*Erros observados
-(OK) Listar especifico: ao utilizar essa opção continua listando todos os produtos
-(OK) Editar nome do produto: ao utilizar essa função o sitema retorna ao menu principal
-(OK) Função sair funciona com qualquer caractere!
-(OK) Mensagem de alteração de saldo, caso tenha dado certo.
-(OK) Ao inserir ou importar, precisamos verificar se o codigo não está duplicado
-(OK) Opção 1, inserir. Pergunta o nome e o saldo ao mesmo tempo.
-(OK) Quando se insere um material pela opção 1, não é possivel listar ele
-(OK) Opção 1 inserir, não funciona quando é a primeira iteração, ou seja o vetor está vazio
-(OK) Importar após inserir
- */
+    private MaterialDAO materialDAO;
+
 
         public static void ler(Material materiais[], String nome) {
             String linha, v[], nome2;
@@ -109,6 +101,11 @@ public class MaterialController {
             return -1;
         }
 
-    public void adcMaterial(EditText edtCodigo, EditText edtNome_produto, EditText edtSaldo) {
+    public void adcMaterial(Material materialCadastro) {
+       try{
+       materialDAO.inserir(materialCadastro);
+    }catch (Exception e){
+       e.printStackTrace();//captura erros na pilha de percurso
+       }
     }
 }

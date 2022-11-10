@@ -9,9 +9,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.almoxarifado.Controller.MaterialController;
+import com.example.almoxarifado.Model.Material;
 
 public class Cadastro_produto extends AppCompatActivity {
-     MaterialController materialController = new MaterialController()
+     MaterialController materialController = new MaterialController();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,11 +23,17 @@ public class Cadastro_produto extends AppCompatActivity {
         EditText edtNome_Produto = (EditText)findViewById(R.id.edtNome_Produto);
         EditText edtSaldo = (EditText)findViewById(R.id.edtSaldo);
 
+
+
         btnCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Material materialCadastro = new Material();
+                materialCadastro.setCodigo(Integer.parseInt(edtCodigo.getText().toString()));
+                materialCadastro.setSaldo(Double.parseDouble(edtSaldo.getText().toString()));
+                materialCadastro.setNome(edtNome_Produto.getText().toString());
 
-                materialController.adcMaterial(edtCodigo,edtNome_Produto,edtSaldo);
+                materialController.adcMaterial(materialCadastro);
 
             }
         });
