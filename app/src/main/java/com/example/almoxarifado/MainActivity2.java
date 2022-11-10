@@ -6,29 +6,35 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
 import com.example.almoxarifado.Controller.MaterialController;
+import com.example.almoxarifado.Model.Material;
 
 public class MainActivity2 extends AppCompatActivity {
-    MaterialController materialController =  new MaterialController();
+    MaterialController materialController = new MaterialController();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        Button btn1 = (Button) findViewById(R.id.btn1);
-        EditText edt1 = (EditText) findViewById(R.id.edt1);
-        EditText edt2 = (EditText) findViewById(R.id.edt2);
-        EditText edt3 = (EditText) findViewById(R.id.edt3);
+        Button btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
+        EditText edtCodigo = (EditText) findViewById(R.id.edtCodigo);
+        EditText edtNome = (EditText) findViewById(R.id.edtNome);
+        EditText edtSaldo = (EditText) findViewById(R.id.edtSaldo);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              materialController.adcMaterial (edt1, edt2, edt3);
+                Material materialCadastro = new Material();
+                materialCadastro.setCodigo(Integer.parseInt(edtCodigo.getText().toString()));
+                materialCadastro.setNome(edtNome.getText().toString());
+                materialCadastro.setSaldo(Double.parseDouble(edtSaldo.getText().toString()));
+                materialController.addMaterial(materialCadastro);
+
             }
         });
+
+
 
 
 
