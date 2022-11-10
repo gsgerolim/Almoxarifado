@@ -54,7 +54,7 @@
             android:text="Quantidade do saldo" />
 
         <EditText
-            android:id="@+id/edtQuant"
+            android:id="@+id/edtSaldo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
