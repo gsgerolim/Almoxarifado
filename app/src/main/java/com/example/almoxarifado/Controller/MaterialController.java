@@ -1,9 +1,12 @@
 package com.example.almoxarifado.Controller;
 
+import android.view.View;
 import android.widget.EditText;
 
 import com.example.almoxarifado.DAO.MaterialDAO;
 import com.example.almoxarifado.Model.Material;
+import com.google.android.material.snackbar.Snackbar;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Scanner;
@@ -102,11 +105,13 @@ public class MaterialController {
         return -1;
     }
 
-    public void addMaterial(Material materialCadastro) {
+    public void addMaterial(Material materialCadastro, View telaParaMostrar) {
             try{
                 materialDAO.inserir(materialCadastro);
+                Snackbar.make(telaParaMostrar, "Material" + materialCadastro.getNome() + "inserido com sucesso.", 1000).show();
             } catch (Exception e){
                 e.printStackTrace(); //captura pilha de erros no percurso
+                Snackbar.make(telaParaMostrar,"Não foi possível cadastrar o item",1000).show();
             }
     }
 
