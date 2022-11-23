@@ -1,7 +1,6 @@
 package com.example.almoxarifado.Model;
 
-public class Material
-{
+public class Material {
     //aqui estão os atributos/caracterisiticas abstraidas do problema
     private int codigo;
     private String nome;

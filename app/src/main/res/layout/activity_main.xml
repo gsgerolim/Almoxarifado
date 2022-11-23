@@ -31,7 +31,7 @@
             android:baselineAligned="false">
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/btnAdd"
                 android:layout_width="206dp"
                 android:layout_height="197dp"
                 app:srcCompat="@android:drawable/ic_input_add" />
