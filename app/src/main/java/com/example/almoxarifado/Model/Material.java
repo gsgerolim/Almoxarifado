@@ -1,11 +1,10 @@
 package com.example.almoxarifado.Model;
 
-public class Material
-{
+public class Material {
     //aqui estão os atributos/caracterisiticas abstraidas do problema
     private int codigo;
     private String nome;
-    private int saldo;
+    private double saldo;
     //Todas variáveis são privadas e a quatidade de gets e sets é o dobro da quatidade de variáveis
 
     /* Dica:
@@ -17,7 +16,7 @@ public class Material
 
     }
 
-    public Material (int codigo, String nome, int saldo) //Construtor com assinatura completa
+    public Material (int codigo, String nome, double saldo) //Construtor com assinatura completa
     {   //this significa que eu estou trabalhando com o contesto atual ao da classe, ou seja, utilizando...
         //... as variáveis privadas receberem algo que vem de fora(que está na assinatura)
         this.codigo = codigo;
@@ -49,12 +48,12 @@ public class Material
         this.nome = nome;
     }
     //-----------------------------------
-    public int getSaldo ()
+    public double getSaldo ()
     {
         return this.saldo;
     }
 
-    public void setSaldo (int saldo)
+    public void setSaldo (double saldo)
     {
         this.saldo = saldo;
     }
