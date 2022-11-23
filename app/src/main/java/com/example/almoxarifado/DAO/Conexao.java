@@ -4,7 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class Conexao extends SQLiteOpenHelper {
+public class Conexao extends SQLiteOpenHelper
+{
 
     private static final String BANCO = "almoxarifado.db";
     //constante que guarda nome do banco de dados//
@@ -15,7 +16,8 @@ public class Conexao extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
+    public void onCreate(SQLiteDatabase db)
+    {
         db.execSQL("Create table material(" +
                 "codigo primary key," +
                 "nome varchar (50)," +
@@ -24,7 +26,8 @@ public class Conexao extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
+    {
 
     }
 }
