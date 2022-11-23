@@ -27,6 +27,5 @@ public class telaCadastro extends AppCompatActivity {
                 startActivity ( intent );
             }
         });
-
     }
 }
