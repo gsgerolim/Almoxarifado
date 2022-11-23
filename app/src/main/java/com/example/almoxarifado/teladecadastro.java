@@ -2,8 +2,10 @@ package com.example.almoxarifado;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -29,14 +31,20 @@ public class teladecadastro extends AppCompatActivity {
      btncad.setOnClickListener(new View.OnClickListener() {
      @Override
      public void onClick(View view) {
-
+         esconderTeclado(teladecadastro.this, view);
         Material materialCadastro = new Material();
         materialCadastro.setCodigo(Integer.parseInt(codigo.getText().toString()));
         materialCadastro.setNome(nome.getText().toString());
         materialCadastro.setSaldo(Double.parseDouble(saldo.getText().toString()));
-        materialController.addMaterial(materialCadastro);
+        materialController.addMaterial(materialCadastro, view);
       }
       });
 
      }
+
+     public static void esconderTeclado(Context context, View view){
+         InputMethodManager imn = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+         imn.hideSoftInputFromWindow(view.getWindowToken(), 0);
+     }
+
      }
