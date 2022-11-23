@@ -43,13 +43,10 @@ public class MaterialDAO {
             Material materialEncontrado = new Material();
             materialEncontrado.setCodigo(cursor.getInt(0));
             materialEncontrado.setNome(cursor.getString(1));
-            materialEncontrado.setSaldo(cursor.getDouble(2));
+            materialEncontrado.setSaldo(cursor.getInt(2));
             materiaisCadastrados.add (materialEncontrado);
 
         }
         return materiaisCadastrados;
     }
-
-
 }
-

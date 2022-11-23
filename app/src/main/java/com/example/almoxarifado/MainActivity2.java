@@ -28,15 +28,10 @@ public class MainActivity2 extends AppCompatActivity {
                 Material materialCadastro = new Material();
                 materialCadastro.setCodigo(Integer.parseInt(edtCodigo.getText().toString()));
                 materialCadastro.setNome(edtNome.getText().toString());
-                materialCadastro.setSaldo(Double.parseDouble(edtSaldo.getText().toString()));
+                materialCadastro.setSaldo(Integer.parseInt(edtSaldo.getText().toString()));
                 materialController.addMaterial(materialCadastro);
 
             }
         });
-
-
-
-
-
     }
 }

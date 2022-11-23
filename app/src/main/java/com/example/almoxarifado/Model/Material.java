@@ -4,7 +4,7 @@ public class Material {
     //aqui estão os atributos/caracterisiticas abstraidas do problema
     private int codigo;
     private String nome;
-    private double saldo;
+    private int saldo;
     //Todas variáveis são privadas e a quatidade de gets e sets é o dobro da quatidade de variáveis
 
     /* Dica:
@@ -16,7 +16,7 @@ public class Material {
 
     }
 
-    public Material (int codigo, String nome, double saldo) //Construtor com assinatura completa
+    public Material (int codigo, String nome, int saldo) //Construtor com assinatura completa
     {   //this significa que eu estou trabalhando com o contesto atual ao da classe, ou seja, utilizando...
         //... as variáveis privadas receberem algo que vem de fora(que está na assinatura)
         this.codigo = codigo;
@@ -48,12 +48,12 @@ public class Material {
         this.nome = nome;
     }
     //-----------------------------------
-    public double getSaldo ()
+    public int getSaldo ()
     {
         return this.saldo;
     }
 
-    public void setSaldo (double saldo)
+    public void setSaldo (int saldo)
     {
         this.saldo = saldo;
     }

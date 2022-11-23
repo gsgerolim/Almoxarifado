@@ -13,7 +13,6 @@ public class MaterialController {
     public void adcMaterial(EditText edtCodigo, EditText edtNome, EditText edtSaldo) {
     }
 
-
     public static void ler(Material materiais[], String nome) {
         String linha, v[], nome2;
         int cod, aux, saldo, cont = 0;
@@ -107,9 +106,7 @@ public class MaterialController {
                 materialDAO.inserir(materialCadastro);
             } catch (Exception e){
                 e.printStackTrace(); //captura pilha de erros no percurso
+                Snackbar.make(telaParaMostrar, "Não foi possível inserir o item", 1000).show;
             }
     }
-
-
-
 }
