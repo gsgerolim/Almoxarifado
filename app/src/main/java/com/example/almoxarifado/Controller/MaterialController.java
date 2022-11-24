@@ -1,5 +1,7 @@
 package com.example.almoxarifado.Controller;
 
+import android.widget.EditText;
+
 import com.example.almoxarifado.Model.Material;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -106,4 +108,7 @@ public class MaterialController {
             }
             return -1;
         }
+
+    public void adcMaterial(EditText edtCod, EditText edtNome, EditText edtQtd) {
+    }
 }
