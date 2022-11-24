@@ -96,6 +96,7 @@ public class MaterialController {
     private static int buscarPorCodigo(Material[] vetorParaBuscar, int codABuscar) {
         for (int i = 0; i < vetorParaBuscar.length; i++) {
             if (vetorParaBuscar[i].getCodigo() == codABuscar && codABuscar != -1) {
+
                 //caso existe o codigo armazenado a var indice
                 //guarda o valor de i e em seguida encerramos
                 //o laço!

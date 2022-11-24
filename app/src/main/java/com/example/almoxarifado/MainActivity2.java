@@ -33,6 +33,8 @@ public class MainActivity2 extends AppCompatActivity {
                 materialCadastro.setNome(edtNome.getText().toString());
                 materialCadastro.setSaldo(Double.parseDouble(edtSaldo.getText().toString()));
                 materialController.addMaterial(materialCadastro, v);
+                //verificar commit BD
+
 
             }
         });
