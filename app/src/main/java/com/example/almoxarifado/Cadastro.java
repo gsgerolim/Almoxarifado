@@ -36,7 +36,7 @@ public class Cadastro extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                esconderTeclado(Cadastro.class, view);
+                esconderTeclado(Cadastro.this, view);
                 Material materialCadastro = new Material();
                 materialCadastro.setCodigo(Integer.parseInt(edtCod.getText().toString()));
                 materialCadastro.setNome((edtNome.getText().toString()));
@@ -47,7 +47,7 @@ public class Cadastro extends AppCompatActivity
     }
                                      //contexto e qual tela estamos
     public static void esconderTeclado(Context context, View view)
-    {
+    {                             //cast, converte tipos de dados
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }

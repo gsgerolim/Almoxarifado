@@ -11,13 +11,17 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Scanner;
 
-public class MaterialController {
+public class MaterialController
+{
     private MaterialDAO materialDAO;
-    public void adcMaterial(EditText edtCodigo, EditText edtNome, EditText edtSaldo) {
+    public void adcMaterial(EditText edtCodigo, EditText edtNome, EditText edtSaldo)
+    {
+
     }
 
 
-    public static void ler(Material materiais[], String nome) {
+    public static void ler(Material materiais[], String nome)
+    {
         String linha, v[], nome2;
         int cod, aux, saldo, cont = 0;
 
@@ -32,17 +36,21 @@ public class MaterialController {
             linha = bfr.readLine();
             /*Linha está organizada em 0-codigo 1-nome 2-saldo*/
 
-            while ((linha != null) && (cont < materiais.length)) {
+            while ((linha != null) && (cont < materiais.length))
+            {
                 v = linha.split(";");
                 //procurar se o codigo existe em todo o vetor
-                if (procuraNoVetor(materiais, Integer.parseInt(v[0]))) {
+                if (procuraNoVetor(materiais, Integer.parseInt(v[0])))
+                {
                     //se existir vai para a proxima linha do arquivo de importação
                     System.out.println("Produto ja cadastrado " + linha);
                     linha = bfr.readLine();
                 } else {
                     //senao existir, procura a primeira posição vazia para inserir o produto
-                    for (int i = 0; i < materiais.length; i++) {
-                        if (materiais[i].getCodigo() == -1) {
+                    for (int i = 0; i < materiais.length; i++)
+                    {
+                        if (materiais[i].getCodigo() == -1)
+                        {
                             material
                                     = new Material(Integer.parseInt(v[0]),
                                     v[1],
@@ -59,22 +67,27 @@ public class MaterialController {
             bfr.close();
             fr.close();
             System.out.println(cont + " Produtos importados!");
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             System.err.println("Erro ao importar!");
         }
     }
 
-    public static boolean procuraNoVetor(Material[] vetorParaBuscar, int codABuscar) {
+    public static boolean procuraNoVetor(Material[] vetorParaBuscar, int codABuscar)
+    {
         boolean encontrado = false;
-        for (int i = 0; i < vetorParaBuscar.length; i++) {
-            if (vetorParaBuscar[i].getCodigo() == codABuscar) {
+        for (int i = 0; i < vetorParaBuscar.length; i++)
+        {
+            if (vetorParaBuscar[i].getCodigo() == codABuscar)
+            {
                 encontrado = true;
             }
         }
         return encontrado;
     }
 
-    public static void mostraMenu() {
+    public static void mostraMenu()
+    {
         //criando o menu de ações
         System.out.println("O que deseja fazer?");
         System.out.println("--MENU--");
