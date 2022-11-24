@@ -3,6 +3,8 @@ package com.example.almoxarifado.Controller;
 import android.widget.EditText;
 
 import com.example.almoxarifado.Model.Material;
+import com.google.android.material.snackbar.Snackbar;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Scanner;
@@ -109,6 +111,14 @@ public class MaterialController {
             return -1;
         }
 
-    public void adcMaterial(EditText edtCod, EditText edtNome, EditText edtQtd) {
+    public void addMaterial(Material materialCadastro, View telaParaMostrar) {
+            try{
+                materialDAO.inserir(materialCadastro);
+                Snackbar.make(telaParaMostrar,"mateterial"+materialCadastro.getNome()+"inseriudo com sucesso",1000)
+            }catch(Exception e){
+                e.printStackTrace();
+                Snackbar.make(telaParaMostrar,"Não foi possivel cadastrar o item",1000).show();
+            }
+    }
     }
 }
