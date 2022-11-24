@@ -12,11 +12,13 @@ import android.widget.EditText;
 import com.example.almoxarifado.Controller.MaterialController;
 import com.example.almoxarifado.Model.Material;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity
+{
     MaterialController materialController = new MaterialController();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         Button btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
@@ -24,9 +26,11 @@ public class MainActivity2 extends AppCompatActivity {
         EditText edtNome = (EditText) findViewById(R.id.edtNome);
         EditText edtSaldo = (EditText) findViewById(R.id.edtSaldo);
 
-        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+        btnCadastrar.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 esconderTeclado(MainActivity2.this, v);
                 Material materialCadastro = new Material();
                 materialCadastro.setCodigo(Integer.parseInt(edtCodigo.getText().toString()));
@@ -37,7 +41,8 @@ public class MainActivity2 extends AppCompatActivity {
         });
     }
 
-    public  static  void esconderTeclado(Context context, View view){
+    public  static  void esconderTeclado(Context context, View view)
+    {
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
