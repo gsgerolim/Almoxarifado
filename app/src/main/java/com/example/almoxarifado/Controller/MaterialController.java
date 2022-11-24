@@ -106,13 +106,13 @@ public class MaterialController {
         return -1;
     }
 
-    public void addMaterial(Material materialCadastro, View, telaParaMostar) {
+    public void addMaterial(Material materialCadastro, View telaParaMostrar) {
             try{
                 materialDAO.inserir(materialCadastro);
                 Snackbar.make(telaParaMostrar, "material" + materialCadastro.getNome() +"inserido com sucesso.", 1000)
             } catch (Exception e){
                 e.printStackTrace(); //captura pilha de erros no percurso
-                Snackbar.make(telaParaMostar,"Não foi possivel cadastrar o item", 1000).show();
+                Snackbar.make(telaParaMostrar,"Não foi possivel cadastrar o item", 1000).show();
             }
     }
 

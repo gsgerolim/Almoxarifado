@@ -2,8 +2,11 @@ package com.example.almoxarifado;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethod;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -30,13 +33,14 @@ public class MainActivity2 extends AppCompatActivity {
                 materialCadastro.setNome(edtNome.getText().toString());
                 materialCadastro.setSaldo(Double.parseDouble(edtSaldo.getText().toString()));
                 materialController.addMaterial(materialCadastro, v);
-
+                // verificar commit BD
             }
         });
-
-
-
-
-
     }
+
+    public static void esconderTeclado(Context context, View view)
+    {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+}
 }
