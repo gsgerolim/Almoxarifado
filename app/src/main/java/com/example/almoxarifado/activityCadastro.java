@@ -36,12 +36,13 @@ public class activityCadastro extends AppCompatActivity {
                materialCadastro.setNome(nome.getText().toString());
                materialCadastro.setSaldo(Double.parseDouble(saldo.getText().toString()));
                materialController.addMaterial(materialCadastro, view);
+               //Verificar commit BD
            }
        });
     }
     public static void esconderTeclado(Context context, View view){
-        InputMethodManager imn = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
-        imn.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
 
     }
 }

@@ -109,9 +109,6 @@ public class MaterialController {
             }catch (Exception e){
                 e.printStackTrace();
                 Snackbar.make(telaParaMostrar, "Não foi possivel cadastrar o item", 1000).show();
-
-
         }
-
     }
 }
