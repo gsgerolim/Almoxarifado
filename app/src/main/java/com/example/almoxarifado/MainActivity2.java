@@ -33,13 +33,15 @@ public class MainActivity2 extends AppCompatActivity {
                 materialCadastro.setNome(edtNome.getText().toString());
                 materialCadastro.setSaldo(Double.parseDouble(edtSaldo.getText().toString()));
                 materialController.addMaterial(materialCadastro, v);
+                //verificar commit BD
             }
         });
     }
 
-    public  static  void esconderTeclado(Context context, View view){
-        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    public  static  void esconderTeclado(Context context, View view){ //parametros para função funcionar
+        InputMethodManager imm = (InputMethodManager) /*<--CAST*/ context.getSystemService(Context.INPUT_METHOD_SERVICE); /* CAST = CONVERTE TIPOS DE DADOS*/
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0); //flag altera o comportamento padrão
+
     }
 
 
